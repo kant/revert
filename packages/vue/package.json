@@ -1,6 +1,6 @@
 {
   "name": "@revertdotdev/revert-vue",
-  "version": "0.0.7",
+  "version": "0.0.6-staging",
   "publishConfig": {
     "access": "public"
   },
@@ -13,7 +13,7 @@
     "serve": "vite preview",
     "build": "vue-tsc --noEmit && vite build",
     "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\"",
-    "publish": "npm publish --access public"
+    "publish": "npm publish --access public --tag=develop"
   },
   "license": "UNLICENSED",
   "peerDependencies": {

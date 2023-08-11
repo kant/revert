@@ -18,7 +18,7 @@ export const useRevertConnectScript = () => {
 
     onMounted(() => {
         const src =
-            process.env.NODE_ENV === 'development' ? 'src/lib/revert-dev.js' : 'https://cdn.revert.dev/revert.js';
+            process.env.NODE_ENV === 'development' ? 'src/lib/revert-dev.js' : 'https://cdn.revert.dev/revert-dev.js';
         const script = document.createElement('script');
         script.src = src;
         script.async = true;

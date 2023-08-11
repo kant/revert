@@ -9,7 +9,7 @@
         "build": "npm run prebuild && vite build",
         "prebuild": "tsc && babel src -d lib && browserify lib/index.js -o lib/bundle.js",
         "bundle": "browserify lib/index.js -o lib/bundle.js",
-        "pre-deploy": "javascript-obfuscator dist/revert.js --output build/revert.js",
+        "pre-deploy": "javascript-obfuscator dist/revert.js --output build/revert-dev.js",
         "deploy": "npm run build && npm run pre-deploy"
     },
     "author": "Jatin Sandilya",

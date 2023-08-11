@@ -4,13 +4,14 @@ on:
     push:
         branches:
             - main
+            - staging
         paths:
             - packages/js/**
 
 jobs:
     build-deploy-js-sdk:
         runs-on: ubuntu-latest
-
+        environment: Staging
         steps:
             - name: Checkout Repository
               uses: actions/checkout@v2
