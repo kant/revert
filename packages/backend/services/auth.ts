@@ -160,6 +160,7 @@ class AuthService {
                     }
                 }
             }
+            console.log('Connection tokens refreshed');
         } catch (error: any) {
             logError(error);
             console.error('Could not update db', error.response?.data);
