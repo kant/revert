@@ -19,6 +19,7 @@ const xprisma = prisma.$extends({
     query: {
         connections: {
             async upsert({ args, query }) {
+                console.log('DEBUG args', args);
                 if (args.create?.tp_customer_id) {
                     args.create.tp_customer_id = gcm.encrypt(args.create.tp_customer_id, config.AES_ENCRYPTION_SECRET);
                 }
