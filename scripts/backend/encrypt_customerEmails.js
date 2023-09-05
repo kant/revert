@@ -45,6 +45,32 @@ const gcm = {
     },
 };
 
+const emails = [
+    'max@letsdive.io',
+    'darshita@letsdive.io',
+    'jurrie.hobers@digitalpartners.nl',
+    'estefania@prosperdigital.com.au',
+    'faisal.r@letsdive.io',
+    'chris@topoutgrp.com',
+    'martin@torque360.co',
+    'jatin+sandbox@revert.dev',
+    'doug.kinsey@artifexfinancial.com',
+    'nitesh@letsdive.io',
+    'jatin@revert.dev',
+    'seekye1stmanagement@gmail.com',
+    'anindyac@letsdive.io',
+    'jt@mavenmg.com',
+    'jacob@prosperdigital.com.au',
+    'kartik@compilecrew.com',
+    'allen@revert.dev',
+];
+
+const secret = process.env.AES_ENCRYPTION_SECRET;
+emails.forEach((email) =>
+    console.log(
+        `UPDATE connections SET tp_customer_id='${gcm.encrypt(email, secret)}' WHERE tp_customer_id='${email}'; \n`
+    )
+);
 // Usage
 // console.log('jatin@revert.dev :', gcm.encrypt('jatin@revert.dev', process.env.AES_ENCRYPTION_SECRET));
 // console.log('jatin+sandbox@revert.dev :', gcm.encrypt('jatin+sandbox@revert.dev', process.env.AES_ENCRYPTION_SECRET));
